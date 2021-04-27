@@ -1,0 +1,80 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  align-items: stretch;
+
+  .card {
+    padding: 2rem 2rem;
+
+    &__title::before {
+      display: block;
+      margin-bottom: 2rem;
+    }
+
+    &:nth-child(1) {
+      background-color: $orange;
+      border-radius: 0.5rem 0.5rem 0 0;
+
+      .card__title::before {
+        content: url("./images/icon-sedans.svg");
+      }
+      .card__link {
+        color: $orange;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: $cyan;
+
+      .card__title::before {
+        content: url("./images/icon-suvs.svg");
+      }
+      .card__link {
+        color: $cyan;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: $darkCyan;
+      border-radius: 0 0 0.5rem 0.5rem;
+
+      .card__title::before {
+        content: url("./images/icon-luxury.svg");
+      }
+      .card__link {
+        color: $darkCyan;
+      }
+    }
+
+    &__text {
+      width: 90%;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+@include smallScreen {
+  .content {
+    flex-direction: row;
+
+    .card {
+      padding: 2rem 3rem 4rem;
+
+      &:nth-child(1) {
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+      &:nth-child(3) {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
+      &__text {
+        width: 80%;
+        padding-bottom: 5.5rem;
+      }
+    }
+  }
+}

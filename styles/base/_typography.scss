@@ -1,0 +1,20 @@
+// font-family: 'Lexend Deca', sans-serif;  --- 400
+// font-family: 'Big Shoulders Display', sans-serif; --- 700
+
+h1 {
+  color: $lightGray;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 3rem;
+}
+
+p {
+  color: $white;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.7rem;
+}
+
+@include smallScreen {
+  a {
+    font-size: 1.2rem;
+  }
+}
